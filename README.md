@@ -6,7 +6,6 @@ The **Car Rental System** is a console-based application developed in Java, leve
 
 ## Features
 
-- **User Registration & Authentication**: Seamless user registration and login for managing rentals.
 - **Car Management**: Admins can add, update, or remove cars from the inventory.
 - **Rental Booking**: Users can easily book cars and view their rental history.
 - **OOP Principles**: Implements key OOP concepts including classes, inheritance, encapsulation, and polymorphism to manage data and functionalities effectively.
