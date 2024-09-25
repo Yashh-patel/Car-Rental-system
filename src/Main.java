@@ -16,6 +16,7 @@ class Car {
         this.basePricePerDay = basePricePerDay;
         this.isAvailable = true;
     }
+
     public String getCarId() {
         return carId;
     }
@@ -110,7 +111,6 @@ class CarRentalSystem {
         if (car.isAvailable()) {
             car.rent();
             rentals.add(new Rental(car, customer, days));
-
         } else {
             System.out.println("Car is not available for rent.");
         }
@@ -127,7 +127,6 @@ class CarRentalSystem {
         }
         if (rentalToRemove != null) {
             rentals.remove(rentalToRemove);
-
         } else {
             System.out.println("Car was not rented.");
         }
@@ -239,17 +238,37 @@ class CarRentalSystem {
     }
 
 }
-public class Main{
+
+public class Main {
     public static void main(String[] args) {
         CarRentalSystem rentalSystem = new CarRentalSystem();
 
-        Car car1 = new Car("C001", "Toyota", "Eclips", 250.0); // Different base price per day for each car
+        // Adding luxury and non-luxury cars
+        Car car1 = new Car("C001", "Toyota", "Eclips", 250.0);
         Car car2 = new Car("C002", "Toyota", "Supra", 300.0);
-        Car car3 = new Car("C003", "Porsch", "911 Camera GTS", 450.0);
+        Car car3 = new Car("C003", "Porsche", "911 Carrera GTS", 450.0);
+        Car car4 = new Car("C004", "Honda", "Civic", 200.0);
+        Car car5 = new Car("C005", "Ford", "Mustang", 350.0);
+
+        // Adding luxury brands
+        Car car6 = new Car("C006", "BMW", "7 Series", 700.0); // Luxury Car 1
+        Car car7 = new Car("C007", "Mercedes-Benz", "S-Class", 750.0); // Luxury Car 2
+        Car car8 = new Car("C008", "Audi", "A8", 680.0); // Luxury Car 3
+        Car car9 = new Car("C009", "Lexus", "LS 500", 720.0); // Luxury Car 4
+        Car car10 = new Car("C010", "Jaguar", "XJ", 740.0); // Luxury Car 5
+
         rentalSystem.addCar(car1);
         rentalSystem.addCar(car2);
         rentalSystem.addCar(car3);
+        rentalSystem.addCar(car4);
+        rentalSystem.addCar(car5);
+        rentalSystem.addCar(car6); // Adding luxury car 1
+        rentalSystem.addCar(car7); // Adding luxury car 2
+        rentalSystem.addCar(car8); // Adding luxury car 3
+        rentalSystem.addCar(car9); // Adding luxury car 4
+        rentalSystem.addCar(car10); // Adding luxury car 5
 
         rentalSystem.menu();
     }
 }
+
